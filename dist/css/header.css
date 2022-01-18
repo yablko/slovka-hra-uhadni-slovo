@@ -1,0 +1,60 @@
+header {
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+}
+
+header .tiny {
+	display: none;
+}
+
+header h1,
+header p {
+	margin: 0;
+}
+
+header h1 {
+	font-size: 1.75rem;
+	font-weight: 900;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+
+	text-align: center;
+	margin-right: 0;
+}
+
+header p {
+	color: #b9b9b9;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+header span {
+	color: #fff;
+	padding: 3px 6px;
+	border-radius: 2px;
+	text-shadow: 1px 1px 0 #3a3a3c;
+}
+
+header a {
+	color: #fff;
+}
+
+/* HEADER RESPONSIVE */
+@media only screen and (max-width: 600px) {
+	header h1 {
+		font-size: 1.5rem;
+		letter-spacing: 0.05rem;
+	}
+
+	header p {
+		font-size: 0.65rem;
+	}
+
+	header p span {
+		color: #fff;
+		padding: 1px 2px;
+		border-radius: 1px;
+		text-shadow: 1px 1px 0 #3a3a3c;
+	}
+}

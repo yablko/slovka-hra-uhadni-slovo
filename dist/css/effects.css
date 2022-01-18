@@ -1,0 +1,57 @@
+/* ANIMATIONS */
+.row {
+	--animate-duration: 0.75s;
+	--animate-delay: 0.25s;
+}
+
+@keyframes bounceIn {
+	0%,
+	25%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	0% {
+		opacity: 0;
+		transform: scale3d(0.4, 0.4, 0.4);
+	}
+	25% {
+		opacity: 1;
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+	to {
+		opacity: 1;
+		transform: scaleX(1);
+	}
+}
+.animate__bounceIn {
+	animation-duration: 0.2s;
+	animation-duration: calc(var(--animate-duration) * 0.2);
+	animation-name: bounceIn;
+}
+
+/* Z-INDEX */
+/* when tiles are jumping, they should be on top */
+.row:nth-child(1) .tile {
+	z-index: 1;
+}
+
+.row:nth-child(2) .tile {
+	z-index: 2;
+}
+
+.row:nth-child(3) .tile {
+	z-index: 3;
+}
+
+.row:nth-child(4) .tile {
+	z-index: 4;
+}
+
+.row:nth-child(5) .tile {
+	z-index: 5;
+}
+
+.row:nth-child(6) .tile {
+	z-index: 6;
+}
