@@ -2457,7 +2457,7 @@ const maxTries = 6;
 
 let solution = allWords[(allWords.length * Math.random()) | 0].toLowerCase();
 let word = "";
-let tries = 6;
+let tries = 1;
 
 // no accents (pre slovencinu)
 let noAccentWords = allWords.map((x) => noAccents(x));
