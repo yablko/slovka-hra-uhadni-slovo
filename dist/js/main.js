@@ -413,6 +413,7 @@ const allWords = [
 	'darca',
 	'darmo',
 	'popis',
+	'opica',
 	'popod',
 	'popol',
 	'popri',
