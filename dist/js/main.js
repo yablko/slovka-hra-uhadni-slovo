@@ -2457,7 +2457,7 @@ const maxTries = 6;
 
 let solution = allWords[(allWords.length * Math.random()) | 0].toLowerCase();
 let word = "";
-let tries = 1;
+let tries = 6;
 
 // no accents (pre slovencinu)
 let noAccentWords = allWords.map((x) => noAccents(x));
@@ -2551,7 +2551,10 @@ const judgeResult = () => {
 		animateTileDance(currentRow());
 	} else if (tries >= maxTries) {
 		youVeryMuchLose();
-		setTimeout(() => alert(`riešenie bolo: ${solution.toUpperCase()}`), 2000);
+		setTimeout(() => {
+			alert(`riešenie bolo: ${solution.toUpperCase()}`);
+			window.location.reload();
+		}, 2000);
 	} else {
 		word = "";
 		tries++;
