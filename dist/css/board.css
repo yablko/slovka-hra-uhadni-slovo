@@ -35,7 +35,11 @@
 
 	width: 4rem;
 	height: 4rem;
-	line-height: 4rem;
+	/* line-height: 4rem; */
+
+	display: flex;;
+	align-items: center;
+	justify-content: center;
 
 	border: 2px solid #565758;
 	box-shadow: 2px 2px 2px #000;
@@ -66,7 +70,7 @@
 	.board .tile {
 		width: 3.5rem;
 		height: 3.5rem;
-		line-height: 3.5rem;
+		/* line-height: 3.5rem; */
 	}
 }
 
@@ -74,7 +78,7 @@
 	.board .tile {
 		width: 3rem;
 		height: 3rem;
-		line-height: 3rem;
+		/* line-height: 3rem; */
 	}
 }
 

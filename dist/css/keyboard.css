@@ -32,10 +32,6 @@
 	box-shadow: 1px 1px 0px #000;
 	border-color: #565758;
 
-	display: flex;;
-	align-items: center;
-	justify-content: center;
-
 	cursor: pointer;
 }
 
