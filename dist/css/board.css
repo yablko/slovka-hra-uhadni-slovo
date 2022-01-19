@@ -2,6 +2,24 @@
 	display: grid;
 	grid-template-rows: repeat(6, 1fr);
 	gap: 5px;
+	position: relative;
+}
+
+.board h2 {
+	color: #538d4e;
+
+	font-size: 3rem;
+	font-weight: 900;
+	display: inline-block;
+
+	width: 12rem;
+	height: 4rem;
+
+	position: absolute;
+	left: 50%;
+	margin-left: -6rem;
+	top: 50%;
+	margin-top: -2rem;
 }
 
 .row {
@@ -21,6 +39,7 @@
 
 	border: 2px solid #565758;
 	box-shadow: 2px 2px 2px #000;
+	/* background: #121213; */
 }
 
 .is-filled {

@@ -35,6 +35,8 @@
 	display: flex;;
 	align-items: center;
 	justify-content: center;
+
+	cursor: pointer;
 }
 
 .keyboard button {
@@ -47,8 +49,8 @@
 	background: #e9e9ed;
 }
 
-.keyboard .tile:hover,
-.keyboard .tile:active {
+.keyboard .tile:not(.present, .correct, .wrong, .double):hover,
+.keyboard .tile:not(.present, .correct, .wrong, .double):active {
 	background: #d0d0d7;
 }
 

@@ -2712,6 +2712,17 @@ const allWords = [
  * ANIMATIONS
  */
 
+// CONFETTI
+let myConfetti = confetti.create(document.querySelector('canvas'), {
+	resize: true,
+	useWorker: true
+})
+
+myConfetti({
+	particleCount: 100,
+	spread: 160
+})
+
 // ADD NEW LETTER
 const animateTileBounce = (tile) => {
     tile.classList.add('is-filled', 'animate__animated', 'animate__bounceIn')
@@ -2753,12 +2764,26 @@ const animateTileDance = (row) => {
         }, 0)
     })
 
+	// heck yeah!
+	setTimeout(() => confetti(), 1500)
+
 }
 
 // WHOLE BOARD FALLS
 const youVeryMuchLose = () => {
     let board = document.querySelector('.board')
     board.classList.add('animate__animated', 'animate__hinge')
+
+	// TODO: show result behind board:
+	// board.querySelectorAll('.row').forEach((el) => {
+	//     el.classList.add('animate__animated', 'animate__hinge')
+	// })
+
+	// setTimeout(() => {
+	// 	let h2 = document.createElement('h2')
+	// 	h2.innerHTML = solution.toUpperCase()
+	// 	board.prepend(h2)
+	// }, 1500);
 }
 
 /**
@@ -2863,8 +2888,8 @@ const judgeResult = () => {
 	if (noAccents(word) === noAccentSolution) {
 		animateTileDance(currentRow());
 	} else if (tries >= maxTries) {
-		alert(`riešenie bolo: ${solution.toUpperCase()}`);
 		youVeryMuchLose();
+		setTimeout(() => alert(`riešenie bolo: ${solution.toUpperCase()}`), 2000);
 	} else {
 		word = "";
 		tries++;
