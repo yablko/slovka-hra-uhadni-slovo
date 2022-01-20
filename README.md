@@ -1,1 +1,0 @@
-# slovka-hra-uhadni-slovo
