@@ -22,7 +22,7 @@ document.addEventListener('keydown', (event) => {
 const submitWord = () => {
 	if (word.length !== maxWordLength) return
 
-	animateRowShake(currentRow())
+	animateTileReveal(currentRow())
 
 	// alert(word)
 }

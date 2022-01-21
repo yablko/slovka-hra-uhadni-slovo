@@ -1,5 +1,6 @@
 .row {
 	--animate-duration: 0.75s;
+	--animate-delay: 0.25s;
 }
 
 @-webkit-keyframes bounceIn {
