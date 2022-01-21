@@ -1,3 +1,7 @@
+.row {
+	--animate-duration: 0.75s;
+}
+
 @-webkit-keyframes bounceIn {
 	0%,
 	25%,
