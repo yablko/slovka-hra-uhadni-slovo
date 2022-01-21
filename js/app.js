@@ -36,6 +36,7 @@ const addLetter = (character) => {
 
 		let tile = currentTile()
 		tile.innerHTML = character
+		tile.classList.add('is-filled', 'animate__animated', 'animate__bounceIn')
 	}
 
 	console.log(word)
@@ -47,6 +48,7 @@ const removeLetter = () => {
 
 	let tile = currentTile()
 	tile.innerHTML = ''
+	tile.className = 'tile'
 
 	word = word.slice(0, -1)
 	console.log(word)
