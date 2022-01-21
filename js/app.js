@@ -1,4 +1,6 @@
 // DATA
+const maxWordLength = 5
+
 let word = ''
 
 // KEYBOARD
@@ -18,26 +20,36 @@ document.addEventListener('keydown', (event) => {
 
 // SUBMIT
 const submitWord = () => {
+	if (word.length !== maxWordLength) return
+
 	alert(word)
 }
 
 // ADD LETTER
-const addLetter = (letter) => {
-	word = word + letter
+const addLetter = (character) => {
+	if (word.length >= maxWordLength) return
 
-	let tile = currentTile()
-	tile.innerHTML = letter
+	// allow only letters
+	if (/^\p{L}$/u.test(character)) {
+		word = word + character
+		word = word.toLowerCase()
 
-	console.log(word);
+		let tile = currentTile()
+		tile.innerHTML = character
+	}
+
+	console.log(word)
 }
 
 // REMOVE LETTER
 const removeLetter = () => {
+	if (word.length <= 0) return
+
 	let tile = currentTile()
 	tile.innerHTML = ''
 
 	word = word.slice(0, -1)
-	console.log(word);
+	console.log(word)
 }
 
 // TILE TO UPDATE
