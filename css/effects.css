@@ -1,8 +1,10 @@
+/* SHORT AND SWEET */
 .row {
 	--animate-duration: 0.75s;
 	--animate-delay: 0.25s;
 }
 
+/* BOUNCE BOUNCE, BABY */
 @-webkit-keyframes bounceIn {
 	0%,
 	25%,
