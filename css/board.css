@@ -1,0 +1,37 @@
+.row {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 5px;
+}
+
+.tile {
+	font-size: 2rem;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	width: 4rem;
+	height: 4rem;
+	line-height: 4rem;
+
+	border: 2px solid #565758;
+	background: #121213;
+}
+
+.is-filled {
+	border-color: #d8d8d8;
+}
+
+.wrong {
+	border-color: #565758;
+	background-color: #565758;
+}
+
+.present {
+	border-color: #b59f3b;
+	background-color: #b59f3b;
+}
+
+.correct {
+	border-color: #538d4e;
+	background-color: #538d4e;
+}
