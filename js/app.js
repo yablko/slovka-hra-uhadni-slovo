@@ -22,7 +22,9 @@ document.addEventListener('keydown', (event) => {
 const submitWord = () => {
 	if (word.length !== maxWordLength) return
 
-	alert(word)
+	animateRowShake(currentRow())
+
+	// alert(word)
 }
 
 // ADD LETTER
@@ -36,7 +38,8 @@ const addLetter = (character) => {
 
 		let tile = currentTile()
 		tile.innerHTML = character
-		tile.classList.add('is-filled', 'animate__animated', 'animate__bounceIn')
+
+		animateTileBounce(tile)
 	}
 
 	console.log(word)
