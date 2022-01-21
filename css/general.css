@@ -1,9 +1,12 @@
 html,
 body {
-	height: 100vh;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+}
+
+html {
+	height: -webkit-fill-available;
 }
 
 body {
@@ -17,4 +20,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 }

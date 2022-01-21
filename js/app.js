@@ -1,3 +1,7 @@
+// DATA
+let word = ''
+
+// KEYBOARD
 document.addEventListener('keydown', (event) => {
 
 	if (event.key === 'Enter') {
@@ -11,3 +15,20 @@ document.addEventListener('keydown', (event) => {
 	}
 
 })
+
+// SUBMIT
+const submitWord = () => {
+	alert(word)
+}
+
+// ADD LETTER
+const addLetter = (letter) => {
+	word = word + letter
+	console.log(word);
+}
+
+// REMOVE LETTER
+const removeLetter = () => {
+	word = word.slice(0, -1)
+	console.log(word);
+}
