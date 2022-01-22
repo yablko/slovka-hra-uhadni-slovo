@@ -1,8 +1,10 @@
 // DATA
 const maxWordLength = 5
+const maxTries = 6
 
 let solution = 'balls'
 let word = ''
+let tries = 1
 
 // KEYBOARD
 document.addEventListener('keydown', (event) => {
@@ -67,7 +69,7 @@ const currentTile = () => {
 
 // CURRENT ROW
 const currentRow = () => {
-	return document.querySelector('.row')
+	return document.querySelector('.row:nth-child(' + tries + ')')
 }
 
 // JUDGE RESULT
@@ -75,7 +77,11 @@ const judgeResult = () => {
 	if (word === solution) {
 		alert('🎉✨ WIN ✨🎉')
 	}
+	else if (tries >= maxTries) {
+		alert('riešenie bolo: ' + solution.toUpperCase())
+	}
 	else {
-		alert('😢')
+		word = ''
+		tries++
 	}
 }
