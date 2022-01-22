@@ -1493,6 +1493,8 @@ const allWords = [
 	'ústup',
 	'úšust',
 	'útlak',
+	'lakeť',
+	'pálka',
 	'útvar',
 	'úvaha',
 	'úvrat',
