@@ -1,6 +1,7 @@
 // DATA
 const maxWordLength = 5
 
+let solution = 'balls'
 let word = ''
 
 // KEYBOARD
@@ -24,7 +25,9 @@ const submitWord = () => {
 
 	animateTileReveal(currentRow())
 
-	// alert(word)
+	setTimeout(() => {
+		judgeResult()
+	}, 1500)
 }
 
 // ADD LETTER
@@ -65,4 +68,14 @@ const currentTile = () => {
 // CURRENT ROW
 const currentRow = () => {
 	return document.querySelector('.row')
+}
+
+// JUDGE RESULT
+const judgeResult = () => {
+	if (word === solution) {
+		alert('🎉✨ WIN ✨🎉')
+	}
+	else {
+		alert('😢')
+	}
 }
