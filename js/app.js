@@ -6,6 +6,12 @@ let solution = allWords[allWords.length * Math.random() | 0].toLowerCase()
 let word = ''
 let tries = 1
 
+let lettersInRow = {
+	correct: [],
+	present: [],
+	wrong: []
+}
+
 console.dir(solution)
 
 // KEYBOARD
@@ -28,10 +34,12 @@ const submitWord = () => {
 	if (word.length !== maxWordLength) return
 
 	// is this a real world?
-	if (!allWords.includes(word)) {
-		animateRowShake(currentRow())
-		return
-	}
+	// if (!allWords.includes(word)) {
+	// 	animateRowShake(currentRow())
+	// 	return
+	// }
+
+	findLettersInRow()
 
 	animateTileReveal(currentRow())
 
@@ -96,5 +104,33 @@ const judgeResult = () => {
 	else {
 		word = ''
 		tries++
+	}
+}
+
+// FIND ALL LETTERS FOR CURRENT ROW
+const findLettersInRow = () => {
+	let present = [];
+	let correct = [];
+	let wrong = [];
+
+	[...word].forEach((letter, index) => {
+		// letter in correct place
+		if (solution.charAt(index) === letter) {
+			correct.push(letter)
+		}
+		// letter in wrong place
+		else if (solution.includes(letter)) {
+			present.push(letter)
+		}
+		// wrong number
+		else {
+			wrong.push(letter)
+		}
+	})
+
+	lettersInRow = {
+		present,
+		correct,
+		wrong
 	}
 }

@@ -10,7 +10,9 @@ const animateTileReveal = (row) => {
 		let colorClass = 'wrong'
 
 		if (solution.includes(tileLetter)) {
-			colorClass = 'present'
+			if (!lettersInRow.correct.includes(tileLetter)) {
+				colorClass = 'present'
+			}
 		}
 
 		if (solution.charAt(index) === tileLetter) {
