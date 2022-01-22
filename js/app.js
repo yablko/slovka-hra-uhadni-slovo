@@ -2,9 +2,12 @@
 const maxWordLength = 5
 const maxTries = 6
 
-let solution = allWords[allWords.length * Math.random() | 0].toLowerCase()
 let word = ''
 let tries = 1
+
+let solution = allWords[allWords.length * Math.random() | 0].toLowerCase()
+let noAccentSolution = noAccents(solution)
+let noAccentWords = allWords.map(x => noAccents(x))
 
 let lettersInRow = {
 	correct: [],
@@ -12,7 +15,7 @@ let lettersInRow = {
 	wrong: []
 }
 
-console.dir(solution)
+// console.log(solution)
 
 // KEYBOARD
 document.addEventListener('keydown', (event) => {
@@ -34,15 +37,13 @@ const submitWord = () => {
 	if (word.length !== maxWordLength) return
 
 	// is this a real world?
-	// if (!allWords.includes(word)) {
-	// 	animateRowShake(currentRow())
-	// 	return
-	// }
+	if (!noAccentWords.includes(noAccents(word))) {
+		animateRowShake(currentRow())
+		return
+	}
 
 	findLettersInRow()
-
 	highlightLetters(currentRow())
-
 	animateTileReveal(currentRow())
 
 	setTimeout(() => {
@@ -65,7 +66,7 @@ const addLetter = (character) => {
 		animateTileBounce(tile)
 	}
 
-	console.log(word)
+	// console.log(word)
 }
 
 // REMOVE LETTER
@@ -92,7 +93,7 @@ const currentRow = () => {
 
 // JUDGE RESULT
 const judgeResult = () => {
-	if (word === solution) {
+	if (noAccents(word) === noAccentSolution) {
 		animateTileDance(currentRow())
 	}
 	else if (tries >= maxTries) {
@@ -116,12 +117,14 @@ const findLettersInRow = () => {
 	let wrong = [];
 
 	[...word].forEach((letter, index) => {
+		letter = noAccents(letter)
+
 		// letter in correct place
-		if (solution.charAt(index) === letter) {
+		if (noAccentSolution.charAt(index) === letter) {
 			correct.push(letter)
 		}
 		// letter in wrong place
-		else if (solution.includes(letter)) {
+		else if (noAccentSolution.includes(letter)) {
 			present.push(letter)
 		}
 		// wrong number
@@ -135,4 +138,9 @@ const findLettersInRow = () => {
 		correct,
 		wrong
 	}
+}
+
+// REMOVE ACCENTS
+function noAccents (str) {
+	return str.normalize("NFD").replace(/\p{Diacritic}/gu, "");
 }

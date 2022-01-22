@@ -25,12 +25,23 @@ body {
 	min-height: -webkit-fill-available;
 }
 
+header {
+	display: flex;
+	align-items: center;
+}
+
 header h1 {
 	font-size: 1.75rem;
 	font-weight: 900;
 	letter-spacing: 0.15rem;
 	text-transform: uppercase;
 	margin: 0;
+}
+
+header small {
+	color: #b9b9b9;
+	font-size: 0.8rem;
+	font-weight: bold;
 }
 
 .keyboard {

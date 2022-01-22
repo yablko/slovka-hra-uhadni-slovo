@@ -18,6 +18,8 @@ const animateTileReveal = (row) => {
 // DANCE WHEN YOU WIN!!!
 const animateTileDance = (row) => {
 	row.querySelectorAll('.tile').forEach((tile, index) => {
+		tile.innerHTML = solution.charAt(index)
+
 		tile.classList.remove('animate__bounceIn', 'animate__flipInY', 'animate__bounce')
 
 		setTimeout(() => {
@@ -48,12 +50,12 @@ const highlightLetters = (row) => {
 	row.querySelectorAll('.tile').forEach((tile, index) => {
 		tile.style.visibility = 'hidden'
 
-		let letter = word.charAt(index)
+		let letter = noAccents(word.charAt(index))
 		let colorClass = 'wrong'
 
 		// if a letter is both 'present' and 'correct', only show correct
 		// only show each 'present' letter once
-		if (solution.includes(letter)) {
+		if (noAccentSolution.includes(letter)) {
 			if (!lettersInRow.correct.includes(letter) && !presentLetters.includes(letter)) {
 				colorClass = 'present'
 				presentLetters.push(letter)
@@ -61,7 +63,7 @@ const highlightLetters = (row) => {
 		}
 
 		// letter is in correct place
-		if (solution.charAt(index) === letter) {
+		if (noAccentSolution.charAt(index) === letter) {
 			colorClass = 'correct'
 		}
 
