@@ -6,24 +6,10 @@ const animateTileBounce = (tile) => {
 // ROTATE TILE, WHEN YOU SUBMIT AN EXISTING WORD
 const animateTileReveal = (row) => {
 	row.querySelectorAll('.tile').forEach((tile, index) => {
-		let tileLetter = word.charAt(index)
-		let colorClass = 'wrong'
-
-		if (solution.includes(tileLetter)) {
-			if (!lettersInRow.correct.includes(tileLetter)) {
-				colorClass = 'present'
-			}
-		}
-
-		if (solution.charAt(index) === tileLetter) {
-			colorClass = 'correct'
-		}
-
-		tile.classList.add(colorClass)
-
 		tile.classList.remove('animate__bounceIn', 'animate__flipInY')
 
 		setTimeout(() => {
+			tile.style.visibility = 'visible'
 			tile.classList.add('animate__flipInY', `animate__delay-${index}s`)
 		}, 0)
 	})
@@ -53,4 +39,43 @@ const animateRowShake = (row) => {
 const youVeryMuchLose = () => {
 	let board = document.querySelector('.board')
 	board.classList.add('animate__animated', 'animate__hinge')
+}
+
+// HIGHTLIGHT LETTERS
+const highlightLetters = (row) => {
+	let presentLetters = []
+
+	row.querySelectorAll('.tile').forEach((tile, index) => {
+		tile.style.visibility = 'hidden'
+
+		let letter = word.charAt(index)
+		let colorClass = 'wrong'
+
+		// if a letter is both 'present' and 'correct', only show correct
+		// only show each 'present' letter once
+		if (solution.includes(letter)) {
+			if (!lettersInRow.correct.includes(letter) && !presentLetters.includes(letter)) {
+				colorClass = 'present'
+				presentLetters.push(letter)
+			}
+		}
+
+		// letter is in correct place
+		if (solution.charAt(index) === letter) {
+			colorClass = 'correct'
+		}
+
+		tile.classList.add(colorClass)
+	})
+
+	// keyboard row in footer
+	document.querySelectorAll('.keyboard .tile').forEach(tile => {
+		let colorClass = ''
+
+		if (lettersInRow.wrong.includes(tile.id)) colorClass = 'wrong'
+		if (lettersInRow.present.includes(tile.id)) colorClass = 'present'
+		if (lettersInRow.correct.includes(tile.id)) colorClass = 'correct'
+
+		if (colorClass) tile.classList.add(colorClass)
+	})
 }

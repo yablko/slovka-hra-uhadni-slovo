@@ -41,3 +41,12 @@
 	border-color: #538d4e;
 	background-color: #538d4e;
 }
+
+/* RESPONSIVE */
+@media only screen and ((max-width: 600px) or (max-height: 600px)) {
+	.tile {
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+	}
+}

@@ -41,6 +41,8 @@ const submitWord = () => {
 
 	findLettersInRow()
 
+	highlightLetters(currentRow())
+
 	animateTileReveal(currentRow())
 
 	setTimeout(() => {
