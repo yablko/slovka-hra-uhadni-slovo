@@ -78,7 +78,6 @@ const removeLetter = () => {
 	tile.className = 'tile'
 
 	word = word.slice(0, -1)
-	console.log(word)
 }
 
 // TILE TO UPDATE
