@@ -4,7 +4,7 @@ const maxTries = 6
 
 let solution = 'balls'
 let word = ''
-let tries = 1
+let tries = 5
 
 // KEYBOARD
 document.addEventListener('keydown', (event) => {
@@ -75,10 +75,15 @@ const currentRow = () => {
 // JUDGE RESULT
 const judgeResult = () => {
 	if (word === solution) {
-		alert('🎉✨ WIN ✨🎉')
+		animateTileDance(currentRow())
 	}
 	else if (tries >= maxTries) {
-		alert('riešenie bolo: ' + solution.toUpperCase())
+		youVeryMuchLose()
+
+		setTimeout(() => {
+			alert('riešenie bolo: ' + solution.toUpperCase())
+			window.location.reload()
+		}, 2000)
 	}
 	else {
 		word = ''
