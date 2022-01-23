@@ -1,5 +1,8 @@
 // SLOVAK
 const allWords = [
+	'pemza',
+	'nuget',
+	'sučka',
 	'achát',
 	'adept',
 	'afekt',
