@@ -1,5 +1,9 @@
 // SLOVAK
 const allWords = [
+	'úchyt',
+	'lakeť',
+	'kozel',
+	'koala',
 	'pemza',
 	'nuget',
 	'sučka',
