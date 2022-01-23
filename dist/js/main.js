@@ -1,5 +1,6 @@
 // SLOVAK
 const allWords = [
+	'perex',
 	'úchyt',
 	'lakeť',
 	'kozel',
