@@ -5,7 +5,8 @@
 	margin: 5px 0 10px;
 }
 
-.keyboard .row {
+.keyboard .row,
+.keyboard .winner {
 	margin-bottom: 2px;
 
 	display: flex;
@@ -17,6 +18,15 @@
 	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
+}
+
+.keyboard .winner {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .keyboard .tile {
@@ -33,6 +43,7 @@
 	border-color: #565758;
 
 	cursor: pointer;
+  z-index: 5;
 }
 
 .keyboard button {
@@ -41,12 +52,12 @@
 	-webkit-user-select: none;
 }
 
-.keyboard .tile:not(.present, .correct, .wrong, .double) {
+.keyboard .tile:not(.present, .correct, .wrong, .double, .large) {
 	background: #e9e9ed;
 }
 
-.keyboard .tile:not(.present, .correct, .wrong, .double):hover,
-.keyboard .tile:not(.present, .correct, .wrong, .double):active {
+.keyboard .tile:not(.present, .correct, .wrong, .double, .large):hover,
+.keyboard .tile:not(.present, .correct, .wrong, .double, .large):active {
 	background: #d0d0d7;
 }
 
@@ -60,6 +71,11 @@
 .keyboard .double {
 	width: 6rem;
 	background: #bbbbbb;
+}
+
+.keyboard .large {
+  width: 14rem;
+  display: flex;
 }
 
 .keyboard .enter {
@@ -92,6 +108,11 @@
 		width: 3.75rem;
 	}
 
+
+	.keyboard .large {
+		width: 10rem;
+	}
+
 	.keyboard .enter {
 		font-size: 0.75rem;
 	}
@@ -108,6 +129,10 @@
 
 	.keyboard .double {
 		width: 3.75rem;
+	}
+
+	.keyboard .large {
+		width: 10rem;
 	}
 
 	.keyboard .enter {

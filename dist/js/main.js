@@ -2601,12 +2601,27 @@ const judgeResult = () => {
     // heck yeah!
     setTimeout(() => confetti(), 1500);
 
+    // tooltip 
     setTimeout(() => {
       if (tries === 1) tooltip('WOW!');
       else if (tries === 2 || tries === 3) tooltip('PARÁDA!');
       else if (tries === 4 || tries === 5) tooltip('máš to!');
       else if (tries === 6) tooltip('uff, tesnotka!');
     }, 1500);
+
+    // keyboard
+    setTimeout(() => {
+      document.querySelectorAll('.keyboard .row .tile').forEach(tile => {
+        tile.classList.add('animate__animated', 'animate__fadeOutDown')
+      });
+    }, 2500);
+
+    // again button
+    setTimeout(() => {
+      let winnerButton = document.querySelector('.keyboard .winner');
+      winnerButton.style.display = 'flex';
+      winnerButton.classList.add('animate__animated', 'animate__fadeIn');
+    }, 2750);
 
   } else if (tries >= maxTries) {
     youVeryMuchLose();
@@ -2702,7 +2717,10 @@ keyboard.addEventListener('click', (event) => {
   if (event.target.nodeName !== 'BUTTON') return; // clicked on link?
   let character = event.target.id;
 
-  if (character === '↵') {
+  if (character === 'again') {
+    window.location.reload();
+  }
+  else if (character === '↵') {
     submitWord();
   }
   else if (character === '←') {
