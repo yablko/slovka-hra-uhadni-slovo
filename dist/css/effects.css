@@ -63,26 +63,26 @@
 
 /* Z-INDEX */
 /* when tiles are jumping, they should be on top */
-.row:nth-child(1) .tile {
+.row:nth-of-type(1) .tile {
 	z-index: 1;
 }
 
-.row:nth-child(2) .tile {
+.row:nth-of-type(2) .tile {
 	z-index: 2;
 }
 
-.row:nth-child(3) .tile {
+.row:nth-of-type(3) .tile {
 	z-index: 3;
 }
 
-.row:nth-child(4) .tile {
+.row:nth-of-type(4) .tile {
 	z-index: 4;
 }
 
-.row:nth-child(5) .tile {
+.row:nth-of-type(5) .tile {
 	z-index: 5;
 }
 
-.row:nth-child(6) .tile {
+.row:nth-of-type(6) .tile {
 	z-index: 6;
 }

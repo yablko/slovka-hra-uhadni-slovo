@@ -24,3 +24,22 @@ body {
 html {
 	height: -webkit-fill-available;
 }
+
+.tooltip {
+  color: black;
+  font-weight: 900;
+  background-color: rgba(255, 255, 255, .85);
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  padding: 1rem;
+  border-radius: 0.35rem;
+  opacity: 0;
+  
+  --animate-duration: 0.2s;
+}
