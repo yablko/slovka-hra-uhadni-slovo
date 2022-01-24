@@ -52,12 +52,12 @@
 	-webkit-user-select: none;
 }
 
-.keyboard .tile:not(.present, .correct, .wrong, .double, .large) {
+.keyboard .tile:not(.present, .correct, .wrong, .double) {
 	background: #e9e9ed;
 }
 
-.keyboard .tile:not(.present, .correct, .wrong, .double, .large):hover,
-.keyboard .tile:not(.present, .correct, .wrong, .double, .large):active {
+.keyboard .tile:not(.present, .correct, .wrong, .double):hover,
+.keyboard .tile:not(.present, .correct, .wrong, .double):active {
 	background: #d0d0d7;
 }
 
