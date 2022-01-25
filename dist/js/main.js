@@ -1,5 +1,6 @@
 // SLOVAK
 const allWords = [
+  'dekór',
   'jamka',
   'karma',
   'decht',
