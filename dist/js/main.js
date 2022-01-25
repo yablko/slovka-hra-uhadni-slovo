@@ -1,5 +1,7 @@
 // SLOVAK
 const allWords = [
+  'jamka',
+  'karma',
   'decht',
   'vklad',
   'metér',
