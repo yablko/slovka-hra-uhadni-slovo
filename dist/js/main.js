@@ -1,5 +1,15 @@
 // SLOVAK
 const allWords = [
+  'rebel',
+  'povyk',
+  'lipid',
+  'budha',
+  'rátač',
+  'pyteľ',
+  'menej',
+  'deväť',
+  'pyteľ',
+  'syrár',
   'dekór',
   'jamka',
   'karma',
@@ -1206,7 +1216,6 @@ const allWords = [
   'víťaz',
   'pôvab',
   'dukát',
-  'chlop',
   'trest',
   'zábal',
   'osada',
