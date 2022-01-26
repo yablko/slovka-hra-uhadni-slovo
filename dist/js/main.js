@@ -2,6 +2,7 @@
 const allWords = [
   'rebel',
   'povyk',
+  'retro',
   'lipid',
   'budha',
   'rátač',
