@@ -1,5 +1,7 @@
 // SLOVAK
 const allWords = [
+  'súdok',
+  'krpce',
   'toner',
   'rebel',
   'povyk',
