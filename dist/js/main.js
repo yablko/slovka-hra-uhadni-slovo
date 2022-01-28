@@ -139,6 +139,7 @@ const allWords = [
   'senát',
   'lazúr',
   'okovy',
+  'salsa',
   'úmera',
   'čipka',
   'nuget',
