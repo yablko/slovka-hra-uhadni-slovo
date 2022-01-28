@@ -275,6 +275,7 @@ const allWords = [
   'roveň',
   'večer',
   'žieňa',
+  'tatar',
   'žetón',
   'holeň',
   'dudok',
