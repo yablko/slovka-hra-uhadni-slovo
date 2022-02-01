@@ -1,6 +1,7 @@
 // SLOVAK
 const allWords = [
   'súdok',
+  'bonus',
   'paket',
   'večne',
   'pekne',
