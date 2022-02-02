@@ -6,6 +6,7 @@ const allWords = [
   'bonus',
   'paket',
   'sitko',
+  'nožík',
   'večne',
   'pekne',
   'účasť',
