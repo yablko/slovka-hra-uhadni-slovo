@@ -5,6 +5,7 @@ const allWords = [
   'smena',
   'bonus',
   'paket',
+  'sitko',
   'večne',
   'pekne',
   'účasť',
