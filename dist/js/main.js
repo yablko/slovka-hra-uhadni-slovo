@@ -2,6 +2,7 @@
 const allWords = [
   'súdok',
   'pytón',
+  'smena',
   'bonus',
   'paket',
   'večne',
