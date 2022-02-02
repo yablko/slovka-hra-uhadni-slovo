@@ -157,6 +157,7 @@ const allWords = [
   'nuget',
   'nárez',
   'bytie',
+  'tokaj',
   'rušič',
   'céčko',
   'splín',
