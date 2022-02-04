@@ -489,6 +489,7 @@ const allWords = [
   'zamat',
   'vikár',
   'lakeť',
+  'výhon',
   'fľask',
   'súper',
   'rande',
