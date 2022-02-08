@@ -1695,6 +1695,7 @@ const allWords = [
   'múmia',
   'junač',
   'pádne',
+  'náves',
   'balík',
   'bedač',
   'telúr',
