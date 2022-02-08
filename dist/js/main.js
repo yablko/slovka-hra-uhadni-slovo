@@ -302,6 +302,7 @@ const allWords = [
   'mláka',
   'jutro',
   'banka',
+  'mukel',
   'mrena',
   'sušeň',
   'rifle',
