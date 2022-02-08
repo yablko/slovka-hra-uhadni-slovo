@@ -443,6 +443,7 @@ const allWords = [
   'hlava',
   'lalot',
   'stuha',
+  'stále',
   'bomba',
   'vstup',
   'rákoš',
