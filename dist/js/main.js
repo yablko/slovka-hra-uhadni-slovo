@@ -1949,7 +1949,6 @@ const allWords = [
   'zhuba',
   'habán',
   'čížik',
-  'match',
   'pľúca',
   'obava',
   'tesár',
