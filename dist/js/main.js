@@ -1,5 +1,6 @@
 // SLOVAK
 const allWords = [
+  'olymp',
   'súdok',
   'pytón',
   'smena',
