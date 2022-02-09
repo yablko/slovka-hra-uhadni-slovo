@@ -45,7 +45,7 @@ const youVeryMuchLose = () => {
 
 // HIGHTLIGHT LETTERS
 const highlightLetters = (row) => {
-	let presentLetters = []
+	let lettersToCheck = noAccentSolution.split('')
 
 	row.querySelectorAll('.tile').forEach((tile, index) => {
 		tile.style.visibility = 'hidden'
@@ -53,18 +53,15 @@ const highlightLetters = (row) => {
 		let letter = noAccents(word.charAt(index))
 		let colorClass = 'wrong'
 
-		// if a letter is both 'present' and 'correct', only show correct
-		// only show each 'present' letter once
-		if (noAccentSolution.includes(letter)) {
-			if (!lettersInRow.correct.includes(letter) && !presentLetters.includes(letter)) {
-				colorClass = 'present'
-				presentLetters.push(letter)
-			}
-		}
-
-		// letter is in correct place
-		if (noAccentSolution.charAt(index) === letter) {
+		// the correct letter is in correct the place
+		if (lettersToCheck[index] === letter) {
 			colorClass = 'correct'
+			lettersToCheck[index] = null
+		}
+		// this letter is present in the solution, but at a different place
+		else if (lettersToCheck.indexOf(letter) >= 0) {
+			colorClass = 'present'
+			lettersToCheck[index] = null
 		}
 
 		tile.classList.add(colorClass)
