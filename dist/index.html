@@ -2,191 +2,200 @@
 <html lang="sk">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <title>SLOVKA (uhádni slovo)</title>
-  <meta name="description" content="Uhádni slovo 🇸🇰 Máš 6 pokusov. Lacný klon WORDLE.">
+	<title>SLOVKA (uhádni slovo)</title>
+	<meta name="description" content="Uhádni slovo 🇸🇰 Máš 6 pokusov. Lacný klon WORDLE.">
 
-  <!-- FB Meta Tags -->
-  <meta property="og:url" content="https://slovka.sk">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Slovka - uhádni slovo!">
-  <meta property="og:description" content="Uhádni slovo 🇸🇰 Máš 6 pokusov. Lacný klon WORDLE.">
-  <meta property="og:image" content="https://yablko.github.io/slovka-hra-uhadni-slovo/dist/img/slovka_og_1200x630.png">
+	<!-- FB Meta Tags -->
+	<meta property="og:url" content="https://slovka.sk">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Slovka - uhádni slovo!">
+	<meta property="og:description" content="Uhádni slovo 🇸🇰 Máš 6 pokusov. Lacný klon WORDLE.">
+	<meta property="og:image"
+		content="https://yablko.github.io/slovka-hra-uhadni-slovo/dist/img/slovka_og_1200x630.png">
 
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="./css/general.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/board.css">
-  <link rel="stylesheet" href="./css/keyboard.css">
-  <link rel="stylesheet" href="./css/effects.css">
-  <link rel="stylesheet" href="./css/modal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="./css/general.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/board.css">
+	<link rel="stylesheet" href="./css/keyboard.css">
+	<link rel="stylesheet" href="./css/effects.css">
+	<link rel="stylesheet" href="./css/modal.css">
 
-  <script defer src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-  <script defer src="./js/main.js"></script>
+	<script defer src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+	<script defer src="./js/main.js"></script>
+	<!-- <script defer src="./js/slovak.js"></script>
+	<script defer src="./js/config.js"></script>
+	<script defer src="./js/animations.js"></script>
+	<script defer src="./js/tooltips.js"></script>
+	<script defer src="./js/app.js"></script> -->
 </head>
 
 <body>
-  <header>
-    <h1>SLOVKA<span class="heart">♥️</span></h1>
-    <p>
-      podľa <a target="_blank" href="https://www.powerlanguage.co.uk/wordle/">wordle</a>.
-      hádaj slovo. <a href="#" data-micromodal-trigger="modal-rules">pravidlá</a>.
-    </p>
-  </header>
+	<header>
+		<h1>SLOVKA<span class="heart">♥️</span></h1>
+		<p>
+			podľa <a target="_blank" href="https://www.powerlanguage.co.uk/wordle/">wordle</a>.
+			hádaj slovo. <a href="#" data-micromodal-trigger="modal-rules">pravidlá</a>.
+		</p>
+	</header>
 
-  <main class="board">
-    <p class="tooltip animate__animated">to slovo nepoznám</p>
+	<main class="board">
+		<p class="tooltip animate__animated">to slovo nepoznám</p>
 
-    <div class="row">
-      <div data-index="1" class="tile"></div>
-      <div data-index="2" class="tile"></div>
-      <div data-index="3" class="tile"></div>
-      <div data-index="4" class="tile"></div>
-      <div data-index="5" class="tile"></div>
-    </div>
-    <div class="row">
-      <div data-index="1" class="tile"></div>
-      <div data-index="2" class="tile"></div>
-      <div data-index="3" class="tile"></div>
-      <div data-index="4" class="tile"></div>
-      <div data-index="5" class="tile"></div>
-    </div>
-    <div class="row">
-      <div data-index="1" class="tile"></div>
-      <div data-index="2" class="tile"></div>
-      <div data-index="3" class="tile"></div>
-      <div data-index="4" class="tile"></div>
-      <div data-index="5" class="tile"></div>
-    </div>
-    <div class="row">
-      <div data-index="1" class="tile"></div>
-      <div data-index="2" class="tile"></div>
-      <div data-index="3" class="tile"></div>
-      <div data-index="4" class="tile"></div>
-      <div data-index="5" class="tile"></div>
-    </div>
-    <div class="row">
-      <div data-index="1" class="tile"></div>
-      <div data-index="2" class="tile"></div>
-      <div data-index="3" class="tile"></div>
-      <div data-index="4" class="tile"></div>
-      <div data-index="5" class="tile"></div>
-    </div>
-    <div class="row">
-      <div data-index="1" class="tile"></div>
-      <div data-index="2" class="tile"></div>
-      <div data-index="3" class="tile"></div>
-      <div data-index="4" class="tile"></div>
-      <div data-index="5" class="tile"></div>
-    </div>
-  </main>
+		<div class="inside">
+			<div class="row">
+				<div data-index="1" class="tile"></div>
+				<div data-index="2" class="tile"></div>
+				<div data-index="3" class="tile"></div>
+				<div data-index="4" class="tile"></div>
+				<div data-index="5" class="tile"></div>
+			</div>
+			<div class="row">
+				<div data-index="1" class="tile"></div>
+				<div data-index="2" class="tile"></div>
+				<div data-index="3" class="tile"></div>
+				<div data-index="4" class="tile"></div>
+				<div data-index="5" class="tile"></div>
+			</div>
+			<div class="row">
+				<div data-index="1" class="tile"></div>
+				<div data-index="2" class="tile"></div>
+				<div data-index="3" class="tile"></div>
+				<div data-index="4" class="tile"></div>
+				<div data-index="5" class="tile"></div>
+			</div>
+			<div class="row">
+				<div data-index="1" class="tile"></div>
+				<div data-index="2" class="tile"></div>
+				<div data-index="3" class="tile"></div>
+				<div data-index="4" class="tile"></div>
+				<div data-index="5" class="tile"></div>
+			</div>
+			<div class="row">
+				<div data-index="1" class="tile"></div>
+				<div data-index="2" class="tile"></div>
+				<div data-index="3" class="tile"></div>
+				<div data-index="4" class="tile"></div>
+				<div data-index="5" class="tile"></div>
+			</div>
+			<div class="row">
+				<div data-index="1" class="tile"></div>
+				<div data-index="2" class="tile"></div>
+				<div data-index="3" class="tile"></div>
+				<div data-index="4" class="tile"></div>
+				<div data-index="5" class="tile"></div>
+			</div>
+		</div>
+	</main>
 
-  <footer>
-    <section class="keyboard">
-      <div class="row">
-        <button class="tile" id="q">q</button>
-        <button class="tile" id="w">w</button>
-        <button class="tile" id="e">e</button>
-        <button class="tile" id="r">r</button>
-        <button class="tile" id="t">t</button>
-        <button class="tile" id="y">y</button>
-        <button class="tile" id="u">u</button>
-        <button class="tile" id="i">i</button>
-        <button class="tile" id="o">o</button>
-        <button class="tile" id="p">p</button>
-      </div>
+	<footer>
+		<section class="keyboard">
+			<div class="row">
+				<button class="tile" id="q">q</button>
+				<button class="tile" id="w">w</button>
+				<button class="tile" id="e">e</button>
+				<button class="tile" id="r">r</button>
+				<button class="tile" id="t">t</button>
+				<button class="tile" id="y">y</button>
+				<button class="tile" id="u">u</button>
+				<button class="tile" id="i">i</button>
+				<button class="tile" id="o">o</button>
+				<button class="tile" id="p">p</button>
+			</div>
 
-      <div class="row">
-        <button class="tile" id="a">a</button>
-        <button class="tile" id="s">s</button>
-        <button class="tile" id="d">d</button>
-        <button class="tile" id="f">f</button>
-        <button class="tile" id="g">g</button>
-        <button class="tile" id="h">h</button>
-        <button class="tile" id="j">j</button>
-        <button class="tile" id="k">k</button>
-        <button class="tile" id="l">l</button>
-      </div>
+			<div class="row">
+				<button class="tile" id="a">a</button>
+				<button class="tile" id="s">s</button>
+				<button class="tile" id="d">d</button>
+				<button class="tile" id="f">f</button>
+				<button class="tile" id="g">g</button>
+				<button class="tile" id="h">h</button>
+				<button class="tile" id="j">j</button>
+				<button class="tile" id="k">k</button>
+				<button class="tile" id="l">l</button>
+			</div>
 
-      <div class="row">
-        <button class="tile double enter" id="↵">enter</button>
-        <button class="tile" id="z">z</button>
-        <button class="tile" id="x">x</button>
-        <button class="tile" id="c">c</button>
-        <button class="tile" id="v">v</button>
-        <button class="tile" id="b">b</button>
-        <button class="tile" id="n">n</button>
-        <button class="tile" id="m">m</button>
-        <button class="tile double" id="←">⌫</button>
-      </div>
+			<div class="row">
+				<button class="tile double enter" id="↵">enter</button>
+				<button class="tile" id="z">z</button>
+				<button class="tile" id="x">x</button>
+				<button class="tile" id="c">c</button>
+				<button class="tile" id="v">v</button>
+				<button class="tile" id="b">b</button>
+				<button class="tile" id="n">n</button>
+				<button class="tile" id="m">m</button>
+				<button class="tile double" id="←">⌫</button>
+			</div>
 
-      <div class="winner">
-        <button class="tile large" id="again">hraj znova ⟲</button>
-      </div>
-    </section>
+			<div class="winner">
+				<button class="tile large" id="again">hraj znova ⟲</button>
+			</div>
+		</section>
 
-    <section class="modal micromodal-slide" id="modal-rules" aria-hidden="false">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-rules-title">
-          <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
-          <article class="modal__content" id="modal-rules-content">
-            <p>
-              Uhádni slovo. Máš 6 pokusov. <br>
-              Zadaj prvý pokus. Písmená sa vyfarbia:
-            </p>
+		<section class="modal micromodal-slide" id="modal-rules" aria-hidden="false">
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+				<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-rules-title">
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+					<article class="modal__content" id="modal-rules-content">
+						<p>
+							Uhádni slovo. Máš 6 pokusov. <br>
+							Zadaj prvý pokus. Písmená sa vyfarbia:
+						</p>
 
-            <div class="row">
-              <div data-index="1" class="tile present">r</div>
-              <div data-index="2" class="tile present">o</div>
-              <div data-index="3" class="tile correct">z</div>
-              <div data-index="4" class="tile wrong">u</div>
-              <div data-index="5" class="tile wrong">m</div>
-            </div>
+						<div class="row">
+							<div data-index="1" class="tile present">r</div>
+							<div data-index="2" class="tile present">o</div>
+							<div data-index="3" class="tile correct">z</div>
+							<div data-index="4" class="tile wrong">u</div>
+							<div data-index="5" class="tile wrong">m</div>
+						</div>
 
-            <p class="middle">
-              <span class="present">ŽLTÁ</span> znamená, že písmeno je v slove. <br>
-              <span class="correct">ZELENÁ</span>, že je na správnom mieste.
-            </p>
+						<p class="middle">
+							<span class="present">ŽLTÁ</span> znamená, že písmeno je v slove. <br>
+							<span class="correct">ZELENÁ</span>, že je na správnom mieste.
+						</p>
 
-            <div class="row">
-              <div data-index="1" class="tile correct">n</div>
-              <div data-index="2" class="tile correct">á</div>
-              <div data-index="3" class="tile correct">z</div>
-              <div data-index="4" class="tile correct">o</div>
-              <div data-index="5" class="tile correct">r</div>
-            </div>
+						<div class="row">
+							<div data-index="1" class="tile correct">n</div>
+							<div data-index="2" class="tile correct">á</div>
+							<div data-index="3" class="tile correct">z</div>
+							<div data-index="4" class="tile correct">o</div>
+							<div data-index="5" class="tile correct">r</div>
+						</div>
 
-            <p>
-              Môžeš písať <strong>bez diakritiky</strong>.
-              Žiadne slovesá, prídavné mená a množné čísla.
-              Až na výnimky ako <strong>TRAKY</strong>.
-            </p>
+						<p>
+							Môžeš písať <strong>bez diakritiky</strong>.
+							Žiadne slovesá, prídavné mená a množné čísla.
+							Až na výnimky ako <strong>TRAKY</strong>.
+						</p>
 
-            <p class="middle">
-              <strong>Beta verzia</strong>. Chýba slovo? Máš feedback? <br>
-              Napíš mi na <a href="https://www.instagram.com/yablko/">instagram</a>.
-            </p>
-          </article>
-        </div>
-      </div>
-      <canvas></canvas>
-    </section>
-  </footer>
+						<p class="middle">
+							<strong>Beta verzia</strong>. Chýba slovo? Máš feedback? <br>
+							Napíš mi na <a href="https://www.instagram.com/yablko/">instagram</a>.
+						</p>
+					</article>
+				</div>
+			</div>
+			<canvas></canvas>
+		</section>
+	</footer>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HR7BRN6B9B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-HR7BRN6B9B');
-  </script>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HR7BRN6B9B"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-HR7BRN6B9B');
+	</script>
 </body>
 
 </html>
