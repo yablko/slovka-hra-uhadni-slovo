@@ -4,6 +4,7 @@
 const allWords = [
 	'zbroj',
 	'obväz',
+	'denár',
 	'čítač',
 	'hrčka',
 	'tyčka',
