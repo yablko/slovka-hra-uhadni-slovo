@@ -6,6 +6,7 @@ const allWords = [
 	'obväz',
 	'denár',
 	'čítač',
+	'optik',
 	'hrčka',
 	'tyčka',
 	'alias',
