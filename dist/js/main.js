@@ -2,6 +2,10 @@
  * VOCABULARY
  */
 const allWords = [
+	'optik',
+	'stria',
+	'orbit',
+	'pitie',
 	'zbroj',
 	'obväz',
 	'denár',
@@ -410,7 +414,6 @@ const allWords = [
 	'zinok',
 	'strýc',
 	'sifón',
-	'marón',
 	'skóre',
 	'revue',
 	'habit',
@@ -1382,7 +1385,6 @@ const allWords = [
 	'lalok',
 	'pahýľ',
 	'tržba',
-	'šišak',
 	'chmeľ',
 	'hľuza',
 	'sedem',
