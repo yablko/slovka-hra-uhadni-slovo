@@ -2,6 +2,12 @@
  * VOCABULARY
  */
 const allWords = [
+	'zbroj',
+	'obväz',
+	'čítač',
+	'hrčka',
+	'tyčka',
+	'alias',
 	'olymp',
 	'súdok',
 	'pytón',
@@ -683,7 +689,6 @@ const allWords = [
 	'teraz',
 	'lôžko',
 	'vinič',
-	'algol',
 	'gazda',
 	'úskok',
 	'vztyk',
