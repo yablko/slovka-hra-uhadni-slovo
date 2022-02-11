@@ -4,20 +4,24 @@
 
 const tooltipElement = document.querySelector('.tooltip')
 
-const tooltip = (text) => {
+const tooltip = (text, forever) => {
     if (!text) return
 
     tooltipElement.innerHTML = text
     tooltipElement.className = 'tooltip animate__animated'
 
+    // fade in tooltip
     setTimeout(() => {
         tooltipElement.classList.add('animate__fadeIn')
     }, 0)
 
-    setTimeout(() => {
-        tooltipElement.className = 'tooltip animate__animated'
-        tooltipElement.classList.add('animate__fadeOut')
-    }, 2500)
+    // fade out tooltip
+    if (!forever) {
+        setTimeout(() => {
+            tooltipElement.className = 'tooltip animate__animated'
+            tooltipElement.classList.add('animate__fadeOut')
+        }, 2500)
+    }
 }
 
 // UNKNOWN WORD TOOLTIP
@@ -25,11 +29,11 @@ const tooltipUnknownWord = () => {
     let lastLetter = word.slice(-1).toLowerCase()
 
     // if (lastLetter === 'y') {
-    // 	tooltip("bez množných čísel")
+    // 	tooltip('bez množných čísel')
     // }
 
     if (['y', 'i', 't'].includes(lastLetter)) {
-        tooltip("žiadne prídavné mená, slovesá, množné čísla")
+        tooltip('žiadne prídavné mená, slovesá, množné čísla')
     }
     else {
         tooltip('to slovo nepoznám')

@@ -41,5 +41,20 @@ html {
 	border-radius: 0.35rem;
 	opacity: 0;
 
+    display: flex;
+    align-items: center;
+
 	--animate-duration: 0.2s;
+}
+
+.tooltip small {
+    font-size: 120%;
+    font-weight: lighter;
+    text-transform: lowercase;
+}
+
+.tooltip strong {
+    font-size: 150%;
+    font-weight: 900;
+    margin-left: 0.25rem;
 }

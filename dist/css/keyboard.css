@@ -3,6 +3,7 @@
 	display: grid;
 	gap: 1px;
 	margin: 5px 0 10px;
+    position: relative;
 }
 
 .keyboard .row,

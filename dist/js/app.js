@@ -49,10 +49,7 @@ document.addEventListener("keydown", (event) => {
 // SUBMIT
 const submitWord = () => {
     if (word.length < maxWordLength) return
-
-    // can't submit again, while animations are running
     if (!canSubmit) return
-    canSubmit = false
 
     // is this a real word ?
     if (!noAccentWords.includes(noAccents(word))) {
@@ -64,6 +61,9 @@ const submitWord = () => {
     findLettersInRow()
     highlightLetters()
     animateTileReveal(currentRow())
+
+    // can't submit again, while animations are running
+    canSubmit = false
 
     // wait for reveal animation to finish
     setTimeout(judgeResult, 1500)
@@ -83,8 +83,6 @@ const addLetter = (character) => {
 
         animateTileBounce(tile)
     }
-
-    // console.log(word)
 }
 
 // REMOVE LETTER
@@ -116,13 +114,17 @@ const youWin = () => {
     animateTileDance(currentRow())
     setTimeout(() => confetti(), 1500)
     tooltipHellYeah()
-    fadeOutKeyboard()
+    fadeOutKeyboard('win')
+    fadeInPlayAgainButton()
 }
 
 // YOU LOSE
 const youLose = () => {
-    dropTheBoard()
-    fadeOutKeyboard(1600)
+    fadeOutKeyboard('lose', 100)
+    fadeInPlayAgainButton(1000)
+    setTimeout(() => {
+        tooltip(`<small>riešenie:</small> <strong>${solution.toUpperCase()}</strong>`, true)
+    }, 750)
 }
 
 // YOU TRY AGAIN
