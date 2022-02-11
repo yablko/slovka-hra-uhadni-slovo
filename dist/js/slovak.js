@@ -2,6 +2,7 @@
  * VOCABULARY
  */
 const allWords = [
+    'labuť',
     'optik',
     'stria',
     'orbit',
