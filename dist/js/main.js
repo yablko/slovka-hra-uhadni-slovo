@@ -2690,10 +2690,7 @@ document.addEventListener("keydown", (event) => {
 // SUBMIT
 const submitWord = () => {
     if (word.length < maxWordLength) return
-
-    // can't submit again, while animations are running
     if (!canSubmit) return
-    canSubmit = false
 
     // is this a real word ?
     if (!noAccentWords.includes(noAccents(word))) {
@@ -2705,6 +2702,9 @@ const submitWord = () => {
     findLettersInRow()
     highlightLetters()
     animateTileReveal(currentRow())
+    
+    // can't submit again, while animations are running
+    canSubmit = false
 
     // wait for reveal animation to finish
     setTimeout(judgeResult, 1500)
