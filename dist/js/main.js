@@ -2529,7 +2529,7 @@ const highlightLetters = () => {
             // this letter is present in the solution, but at a different place
             else if (lettersToCheck.indexOf(letter) >= 0) {
                 colorClass = 'present'
-                lettersToCheck[index] = null
+                lettersToCheck[lettersToCheck.indexOf(letter)] = null
             }
 
             tile.classList.add(colorClass)
