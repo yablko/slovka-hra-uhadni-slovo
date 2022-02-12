@@ -144,15 +144,15 @@ const findLettersInRow = () => {
 
             // letter in correct place
             if (letter === noAccentSolution.charAt(index)) {
-                correct.push(letter)
+                correct.push({ letter: letter, index: index })
             }
             // letter in wrong place
             else if (noAccentSolution.includes(letter)) {
-                present.push(letter)
+                present.push({ letter: letter, index: index })
             }
             // wrong letter
             else {
-                wrong.push(letter)
+                wrong.push({ letter: letter, index: index })
             }
         })
 

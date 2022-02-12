@@ -2509,39 +2509,46 @@ const animateTileDance = (row) => {
 
 // HIGHLIGHT LETTERS
 const highlightLetters = () => {
+    let rowTiles = currentRow().querySelectorAll(".tile")
     let lettersToCheck = noAccentSolution.split('')
 
-    // board row
-    currentRow()
-        .querySelectorAll(".tile")
-        .forEach((tile, index) => {
-            tile.style.visibility = "hidden"
+    // first we find all 'correct' letters
+    rowTiles.forEach((tile, index) => {
+        tile.style.visibility = "hidden"
 
-            let letter = noAccents(word.charAt(index))
-            let colorClass = "wrong"
+        let letter = noAccents(word.charAt(index))
 
-            // the correct letter is in correct the place
-            if (lettersToCheck[index] === letter) {
-                colorClass = 'correct'
-                lettersToCheck[index] = null
-            }
-            // this letter is present in the solution, but at a different place
-            else if (lettersToCheck.indexOf(letter) >= 0) {
+        if (lettersInRow.correct.some(o => o.letter === letter && o.index === index)) {
+            tile.classList.add('correct')
+            lettersToCheck[index] = null
+        }
+    })
+
+    // then we check for 'present' and 'wrong'
+    rowTiles.forEach((tile, index) => {
+        tile.style.visibility = "hidden"
+
+        let letter = noAccents(word.charAt(index))
+        let colorClass = "wrong"
+
+        if (lettersInRow.present.some(o => o.letter === letter && o.index === index)) {
+            if (lettersToCheck.includes(letter)) {
                 colorClass = 'present'
                 lettersToCheck[lettersToCheck.indexOf(letter)] = null
             }
+        }
 
-            tile.classList.add(colorClass)
-        })
+        tile.classList.add(colorClass)
+    })
 
 
     // aplhabet row in footer
     document.querySelectorAll(".keyboard .tile").forEach((tile, index) => {
         let colorClass = ""
 
-        if (lettersInRow.wrong.includes(tile.id)) colorClass = "wrong"
-        if (lettersInRow.present.includes(tile.id)) colorClass = "present"
-        if (lettersInRow.correct.includes(tile.id)) colorClass = "correct"
+        if (lettersInRow.wrong.some(o => o.letter === tile.id)) colorClass = "wrong"
+        if (lettersInRow.present.some(o => o.letter === tile.id)) colorClass = "present"
+        if (lettersInRow.correct.some(o => o.letter === tile.id)) colorClass = "correct"
 
         if (colorClass) {
             setTimeout(() => tile.classList.add(colorClass), 1400)
@@ -2809,15 +2816,15 @@ const findLettersInRow = () => {
 
             // letter in correct place
             if (letter === noAccentSolution.charAt(index)) {
-                correct.push(letter)
+                correct.push({ letter: letter, index: index })
             }
             // letter in wrong place
             else if (noAccentSolution.includes(letter)) {
-                present.push(letter)
+                present.push({ letter: letter, index: index })
             }
             // wrong letter
             else {
-                wrong.push(letter)
+                wrong.push({ letter: letter, index: index })
             }
         })
 
