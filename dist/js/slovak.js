@@ -1566,7 +1566,6 @@ const allWords = [
     'úšust',
     'lymfa',
     'chlad',
-    'toast',
     'cedák',
     'tupec',
     'ladom',
