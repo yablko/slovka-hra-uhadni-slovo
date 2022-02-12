@@ -115,4 +115,8 @@ Reálne - prerob hru všeobecne. Na N-písmenové slová.
 Ak zadáš, že chceš 3 písmená, nakreslí sa 3-písmenová herná plocha.  
 A tak!  
   
+**k) VYMYSLI SI VLASTNÉ ÚLOHY**  
+Lepšie, ako moje.  
+Tak sa učíš!
+  
 ♥️
