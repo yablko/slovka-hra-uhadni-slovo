@@ -93,15 +93,26 @@ Prerob to do čohokoľvek, čo sa chceš naučiť.
 Ja to robím, keď sa učím niečo nové.  
 Skúsim v tom vyrobiť skutočnú vec.  
 
-**h) ANIMÁCIA**  
+**h) CHYBNÁ ANIMÁCIA**  
 
 Nech sa použité písmená dole v klávesnici vyznačia až po skončení animácie.  
 Teraz bliknú hneď na farbu, už pocaš toho, ako sa písmená hore otáčajú.  
+  
+**Plus - a toto je dôležitejšie - nevyznačuje sa správny počet písmen.**  
+V kóde kurzu ak sa písmeno v slove opakuje, vyznačí sa len prvé.  
+V kurze ti hovorím, že oprav to. A hovorím to znova, tu!  
 
 **i) UKLADAJ SLOVÁ**  
 
 Teoreticky sa môže stať, že hra vyberie po sebe to isté slová.  
 Ukladaj slová, ktoré už boli použité.  
 Aby sa vždy vyberali nové a nové slová.  
+  
+**j) 6 PÍSMEN**  
+  
+Prerob hru na 6 písmenové slová.  
+Reálne - prerob hru všeobecne. Na N-písmenové slová.  
+Ak zadáš, že chceš 3 písmená, nakreslí sa 3-písmenová herná plocha.  
+A tak!  
   
 ♥️
