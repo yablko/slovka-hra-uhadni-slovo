@@ -2661,6 +2661,7 @@ let noAccentWords = allWords.map((x) => noAccents(x))
 let noAccentSolution = noAccents(solution)
 
 let canSubmit = true
+let gameEnded = false
 
 let lettersInRow = {
     correct: [],
@@ -2682,6 +2683,9 @@ const currentRow = () => {
 document.addEventListener("keydown", (event) => {
     // de-focus any active element (needed for micromodal)
     if ("activeElement" in document) document.activeElement.blur()
+
+    // nope
+    if (gameEnded) return
 
     if (event.key === "Enter") {
         submitWord()
@@ -2757,6 +2761,8 @@ const judgeResult = () => {
 
 // YOU WIN
 const youWin = () => {
+    gameEnded = true
+
     animateTileDance(currentRow())
     setTimeout(() => confetti(), 1500)
     tooltipHellYeah()
@@ -2766,6 +2772,8 @@ const youWin = () => {
 
 // YOU LOSE
 const youLose = () => {
+    gameEnded = true
+
     fadeOutKeyboard('lose', 100)
     fadeInPlayAgainButton(1000)
     setTimeout(() => {
@@ -2812,10 +2820,12 @@ const findLettersInRow = () => {
 // MOBILE
 const keyboard = document.querySelector('.keyboard')
 keyboard.addEventListener('click', (event) => {
+    // clicked on button?
     if (event.target.nodeName !== 'BUTTON') return
+
     let character = event.target.id
 
-    if (character === 'again') {
+    if (gameEnded && character === 'again') {
         window.location.reload()
     }
     else if (character === '↵') {
