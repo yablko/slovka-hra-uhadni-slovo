@@ -28,11 +28,7 @@ const tooltip = (text, forever) => {
 const tooltipUnknownWord = () => {
     let lastLetter = word.slice(-1).toLowerCase()
 
-    // if (lastLetter === 'y') {
-    // 	tooltip('bez množných čísel')
-    // }
-
-    if (['y', 'i', 't'].includes(lastLetter)) {
+    if (['y', 'i'].includes(lastLetter)) {
         tooltip('žiadne prídavné mená, slovesá, množné čísla')
     }
     else {

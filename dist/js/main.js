@@ -2541,6 +2541,7 @@ const highlightLetters = () => {
         tile.classList.add(colorClass)
     })
 
+
     // aplhabet row in footer
     document.querySelectorAll(".keyboard .tile").forEach((tile, index) => {
         let colorClass = ""
@@ -2553,28 +2554,6 @@ const highlightLetters = () => {
             setTimeout(() => tile.classList.add(colorClass), 1400)
         }
     })
-}
-
-
-// WHOLE BOARD FALLS
-const dropTheBoard = () => {
-    let boardInside = document.querySelector('.board .inside')
-    boardInside.classList.add('animate__animated', 'animate__hinge')
-
-    revealSolution()
-}
-
-
-// SOLUTION APPEARS BEHIND GAME BOARD
-const revealSolution = () => {
-    let board = document.querySelector('.board')
-
-    setTimeout(() => {
-        let h2 = document.createElement('h2')
-        h2.classList.add('animate__animated', 'animate__fadeIn')
-        h2.innerHTML = solution.toUpperCase()
-        board.prepend(h2)
-    }, 1750)
 }
 
 
@@ -2646,11 +2625,7 @@ const tooltip = (text, forever) => {
 const tooltipUnknownWord = () => {
     let lastLetter = word.slice(-1).toLowerCase()
 
-    // if (lastLetter === 'y') {
-    // 	tooltip('bez množných čísel')
-    // }
-
-    if (['y', 'i', 't'].includes(lastLetter)) {
+    if (['y', 'i'].includes(lastLetter)) {
         tooltip('žiadne prídavné mená, slovesá, množné čísla')
     }
     else {

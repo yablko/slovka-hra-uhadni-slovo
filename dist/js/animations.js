@@ -93,28 +93,6 @@ const highlightLetters = () => {
 }
 
 
-// WHOLE BOARD FALLS
-const dropTheBoard = () => {
-    let boardInside = document.querySelector('.board .inside')
-    boardInside.classList.add('animate__animated', 'animate__hinge')
-
-    revealSolution()
-}
-
-
-// SOLUTION APPEARS BEHIND GAME BOARD
-const revealSolution = () => {
-    let board = document.querySelector('.board')
-
-    setTimeout(() => {
-        let h2 = document.createElement('h2')
-        h2.classList.add('animate__animated', 'animate__fadeIn')
-        h2.innerHTML = solution.toUpperCase()
-        board.prepend(h2)
-    }, 1750)
-}
-
-
 // FADE OUT KEYBOARD
 const fadeOutKeyboard = (variant, delay) => {
     let keyboardDelay = delay || 2500
