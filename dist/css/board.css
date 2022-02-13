@@ -71,7 +71,7 @@
 		width: 3rem;
 		height: 3rem;
 	}
-}}
+}
 
 @media only screen and (max-height: 560px) {
 	.board .tile {
