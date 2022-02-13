@@ -20,8 +20,8 @@
 	font-weight: 900;
 	text-transform: uppercase;
 
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 2.75rem;
+	height: 2.75rem;
 
 	display: flex;
 	align-items: center;
@@ -75,7 +75,7 @@
 
 @media only screen and (max-height: 700px) {
 	.board .tile {
-		width: 2.5rem;
-		height: 2.5rem;
+		width: 2.75rem;
+		height: 2.75rem;
 	}
 }
