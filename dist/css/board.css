@@ -20,8 +20,8 @@
 	font-weight: 900;
 	text-transform: uppercase;
 
-	width: 2.75rem;
-	height: 2.75rem;
+	width: 3rem;
+	height: 3rem;
 
 	display: flex;
 	align-items: center;
@@ -52,13 +52,6 @@
 
 /* RESPONSIVE */
 
-@media only screen and (min-width: 480px) {
-	.board .tile {
-		width: 3rem;
-		height: 3rem;
-	}
-}
-
 @media only screen and (min-width: 600px) {
 	.board .tile {
 		width: 3.5rem;
@@ -73,9 +66,16 @@
 	}
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 660px) {
 	.board .tile {
-		width: 2.75rem;
-		height: 2.75rem;
+		width: 3rem;
+		height: 3rem;
+	}
+}}
+
+@media only screen and (max-height: 560px) {
+	.board .tile {
+		width: 2.5rem;
+		height: 2.5rem;
 	}
 }
