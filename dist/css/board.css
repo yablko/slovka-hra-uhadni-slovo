@@ -9,24 +9,6 @@
 	position: relative;
 }
 
-.board h2 {
-	/* color: #538d4e; */
-	/* color: #5cc053; */
-	color: #68b362;
-	font-size: 3.5rem;
-	font-weight: 900;
-
-	margin: 0;
-
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
-	z-index: 100;
-	text-shadow: 2px 2px 0 #000;
-}
-
 .row {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -38,9 +20,8 @@
 	font-weight: 900;
 	text-transform: uppercase;
 
-	width: 4rem;
-	height: 4rem;
-	/* line-height: 4rem; */
+	width: 2.5rem;
+	height: 2.5rem;
 
 	display: flex;
 	align-items: center;
@@ -48,7 +29,6 @@
 
 	border: 2px solid #565758;
 	box-shadow: 2px 2px 2px #000;
-	/* background: #121213; */
 }
 
 .is-filled {
@@ -71,26 +51,31 @@
 }
 
 /* RESPONSIVE */
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width: 480px) {
+	.board .tile {
+		width: 3rem;
+		height: 3rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
 	.board .tile {
 		width: 3.5rem;
 		height: 3.5rem;
-		/* line-height: 3.5rem; */
 	}
 }
 
-@media only screen and ((max-height: 700px) or (max-width: 480px)) {
+@media only screen and (min-width: 720px) {
 	.board .tile {
-		width: 3rem;
-		height: 3rem;
-		/* line-height: 3rem; */
+		width: 4rem;
+		height: 4rem;
 	}
 }
 
-/* @media only screen and (max-device-width: 480px) and ((-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx)) {
+@media only screen and (max-height: 700px) {
 	.board .tile {
-		width: 3rem;
-		height: 3rem;
-		line-height: 3rem;
+		width: 2.5rem;
+		height: 2.5rem;
 	}
-} */
+}
