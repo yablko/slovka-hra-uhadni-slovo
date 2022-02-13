@@ -78,7 +78,6 @@ const highlightLetters = () => {
         tile.classList.add(colorClass)
     })
 
-
     // aplhabet row in footer
     document.querySelectorAll(".keyboard .tile").forEach((tile, index) => {
         let colorClass = ""
