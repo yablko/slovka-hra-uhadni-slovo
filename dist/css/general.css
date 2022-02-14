@@ -24,37 +24,3 @@ body {
 html {
 	height: -webkit-fill-available;
 }
-
-.tooltip {
-	color: black;
-	font-weight: 900;
-	background-color: rgba(255, 255, 255, 0.85);
-	text-transform: uppercase;
-
-	position: absolute;
-	top: 29%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 100;
-
-	padding: 1rem;
-	border-radius: 0.35rem;
-	opacity: 0;
-
-    display: flex;
-    align-items: center;
-
-	--animate-duration: 0.2s;
-}
-
-.tooltip small {
-    font-size: 120%;
-    font-weight: lighter;
-    text-transform: lowercase;
-}
-
-.tooltip strong {
-    font-size: 150%;
-    font-weight: 900;
-    margin-left: 0.25rem;
-}

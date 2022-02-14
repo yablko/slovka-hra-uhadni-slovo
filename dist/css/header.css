@@ -16,7 +16,7 @@ header p {
 header h1 {
 	font-size: 1.75rem;
 	font-weight: 900;
-	letter-spacing: 0.15rem;
+	letter-spacing: -0.075rem;
 	text-transform: uppercase;
 
 	text-align: center;

@@ -4,7 +4,7 @@
 
 .modal__content span.present,
 .modal__content span.correct {
-	display: inline-block;
+    display: inline-block;
 	margin-bottom: 2px;
 	padding: 1px 4px;
 	border-radius: 3px;
@@ -12,20 +12,36 @@
 	color: #000;
 }
 
+.modal__content {
+    font-size: 0.9rem;
+}
+
 .modal__content .middle {
-	margin: 2rem 0;
+	margin: 1.5rem 0;
+}
+
+.modal__content p:first-of-type {
+    margin-bottom: 1.5rem;
 }
 
 .modal__content .row {
-	max-width: 375px;
+	width: 80%;
 	justify-items: start;
 }
 
-@media screen and (max-width: 460px) {
-	.modal__content .tile {
+.modal__content .tile {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+@media screen and (min-width: 460px) {
+	.modal__content {
+        font-size: 1rem;
+    }
+    
+    .modal__content .tile {
 		width: 3.5rem;
 		height: 3.5rem;
-		line-height: 3.5rem;
 	}
 }
 
@@ -38,6 +54,7 @@
 	text-align: center;
 	border: 1px solid black;
 }
+
 
 /**************************\
   Basic Modal Styles
