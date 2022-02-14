@@ -337,7 +337,6 @@ const allWords = [
     'pikle',
     'lejak',
     'rínok',
-    'fičúr',
     'žblnk',
     'kasár',
     'zával',
