@@ -16,7 +16,7 @@ header p {
 header h1 {
 	font-size: 1.75rem;
 	font-weight: 900;
-	letter-spacing: -0.075rem;
+	letter-spacing: -2px;
 	text-transform: uppercase;
 
 	text-align: center;
@@ -44,7 +44,7 @@ header a {
 @media only screen and (max-width: 600px) {
 	header h1 {
 		font-size: 1.5rem;
-		letter-spacing: 0.05rem;
+		letter-spacing: -2px;
 	}
 
 	header p {
