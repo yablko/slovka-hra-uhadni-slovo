@@ -1854,7 +1854,7 @@ const allWords = [
     'horák',
     'dôkaz',
     'rebro',
-    'silúr',
+    'párik',
     'výber',
     'činka',
     'blesk',
