@@ -2,6 +2,10 @@
  * VOCABULARY
  */
 const allWords = [
+    'madlo',
+    'audio',
+    'sunar',
+    'sonar',
     'kudla',
     'labuť',
     'optik',
@@ -940,7 +944,6 @@ const allWords = [
     'zavše',
     'tlmič',
     'výkal',
-    'jupka',
     'škoda',
     'pipka',
     'gágor',
@@ -1831,7 +1834,6 @@ const allWords = [
     'mulat',
     'súvis',
     'možno',
-    'ruman',
     'helma',
     'pílka',
     'kufor',
