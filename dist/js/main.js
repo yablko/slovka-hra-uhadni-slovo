@@ -9,6 +9,7 @@ const allWords = [
     'kudla',
     'labuť',
     'optik',
+    'teplo',
     'stria',
     'orbit',
     'pitie',
